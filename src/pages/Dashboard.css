@@ -1,0 +1,108 @@
+/* =========================================
+   DASHBOARD LAYOUT
+========================================= */
+
+.dashboard-layout {
+  width: 100%;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+}
+
+/* Main area automatically starts after sidebar */
+.dashboard-main {
+  margin-left: var(--sidebar-width);
+
+  width: calc(100% - var(--sidebar-width));
+
+  min-width: 0;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+
+  padding: 40px;
+  
+  overflow-x: hidden;
+}
+
+/* Prevent dashboard content from pushing outside */
+.dashboard-main * {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   DASHBOARD STATS
+========================================= */
+
+.stats {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+/* =========================================
+   STAT CARD
+========================================= */
+
+.stat-card {
+  min-width: 0;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   MEDIUM SCREEN
+========================================= */
+
+@media (max-width: 1200px) {
+  .dashboard-main {
+    padding: 30px;
+  }
+
+  .stats {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* =========================================
+   SMALL SCREEN
+========================================= */
+
+@media (max-width: 850px) {
+  .dashboard-main {
+    margin-left: var(--sidebar-width);
+
+    width: calc(100% - var(--sidebar-width));
+
+    padding: 24px 20px;
+  }
+
+  .stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+  }
+}
+
+/* =========================================
+   VERY SMALL SCREEN
+========================================= */
+
+@media (max-width: 600px) {
+  .dashboard-main {
+    padding: 20px 15px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
