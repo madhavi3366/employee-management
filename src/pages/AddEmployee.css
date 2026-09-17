@@ -1,0 +1,1116 @@
+/* =========================================================
+   ADD EMPLOYEE PAGE
+   ========================================================= */
+
+.add-employee-page {
+  padding: 34px 42px 60px;
+  background: #f7f9fc;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.add-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+
+.add-header-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.add-page-icon {
+  width: 46px;
+  height: 46px;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eaf2ff;
+  color: #1769e0;
+
+  flex-shrink: 0;
+}
+
+.page-eyebrow {
+  color: #526581;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  margin-bottom: 3px;
+}
+
+.add-page-header h1 {
+  margin: 0;
+
+  color: #14233d;
+
+  font-size: 34px;
+  line-height: 1.15;
+
+  font-weight: 700;
+}
+
+.add-page-header p {
+  margin: 7px 0 0;
+
+  color: #718096;
+
+  font-size: 15px;
+}
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.back-employees-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 11px 16px;
+
+  border: 1px solid #d9e1eb;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #233653;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back-employees-btn:hover {
+  border-color: #b9c8da;
+  background: #f9fbfd;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.form-message {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 16px;
+
+  border-radius: 9px;
+
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.success-message {
+  color: #176b42;
+
+  background: #eaf8f0;
+
+  border: 1px solid #bce8cf;
+}
+
+.error-message {
+  color: #b42318;
+
+  background: #fff1f0;
+
+  border: 1px solid #f4c7c3;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.employee-form {
+  width: 100%;
+}
+
+.form-section {
+  background: #ffffff;
+
+  border: 1px solid #e5eaf0;
+
+  border-radius: 10px;
+
+  padding: 25px 28px 29px;
+
+  margin-bottom: 18px;
+
+  box-shadow:
+    0 2px 8px rgba(22, 34, 51, 0.035);
+}
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #17263d;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.section-heading p {
+  margin: 5px 0 0;
+
+  color: #748196;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  column-gap: 22px;
+  row-gap: 18px;
+}
+
+.form-field {
+  min-width: 0;
+}
+
+.form-field.full-width {
+  grid-column: 1 / -1;
+}
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+.form-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #263954;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-field label span:not(.optional) {
+  color: #e03a3a;
+}
+
+.form-field .optional {
+  color: #7d899b;
+
+  font-weight: 400;
+}
+
+.form-field small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #8a96a7;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d8e0e9;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #25364f;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.form-field input,
+.form-field select {
+  height: 40px;
+
+  padding: 0 11px;
+}
+
+.form-field textarea {
+  padding: 11px;
+
+  min-height: 90px;
+
+  resize: vertical;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #a3adba;
+}
+
+.form-field select {
+  cursor: pointer;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #4b8df8;
+
+  box-shadow:
+    0 0 0 3px rgba(75, 141, 248, 0.11);
+}
+
+/* =========================================================
+   TEAM SELECTOR
+   NETWORKING / AI / HR / ACCOUNTS / ADMINISTRATION
+   ========================================================= */
+
+.team-selection-field {
+  grid-column: span 3;
+}
+
+.team-selection-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+/* =========================================================
+   TEAM SELECT CARD
+   ========================================================= */
+
+.team-select-card {
+  position: relative;
+
+  min-width: 0;
+
+  min-height: 112px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  padding: 15px;
+
+  border: 1px solid #dce3eb;
+
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  color: #263954;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.team-select-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #c7d2df;
+
+  box-shadow:
+    0 7px 18px rgba(15, 23, 42, 0.07);
+}
+
+.team-select-card.selected {
+  box-shadow:
+    0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
+/* =========================================================
+   TEAM SELECT ICON
+   ========================================================= */
+
+.team-select-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  margin-bottom: 11px;
+
+  background: #f1f5f9;
+
+  color: #475569;
+
+  flex-shrink: 0;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+/* =========================================================
+   TEAM SELECT CONTENT
+   ========================================================= */
+
+.team-select-content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.team-select-content strong {
+  display: block;
+
+  color: #1e293b;
+
+  font-size: 14px;
+  line-height: 1.25;
+
+  font-weight: 700;
+}
+
+.team-select-content span {
+  display: block;
+
+  color: #7b8798;
+
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+/* =========================================================
+   SELECTED CHECK
+   ========================================================= */
+
+.team-selected-check {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+}
+
+/* =========================================================
+   NETWORKING
+   ========================================================= */
+
+.team-select-networking {
+  border-color: #d7e5fb;
+}
+
+.team-select-networking .team-select-icon {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.team-select-networking:hover,
+.team-select-networking.selected {
+  border-color: #8db7f2;
+  background: #f8fbff;
+}
+
+.team-select-networking .team-selected-check {
+  color: #2563eb;
+}
+
+/* =========================================================
+   AI
+   ========================================================= */
+
+.team-select-ai {
+  border-color: #e5daf9;
+}
+
+.team-select-ai .team-select-icon {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.team-select-ai:hover,
+.team-select-ai.selected {
+  border-color: #c5adf2;
+  background: #fcfaff;
+}
+
+.team-select-ai .team-selected-check {
+  color: #7c3aed;
+}
+
+/* =========================================================
+   HR
+   ========================================================= */
+
+.team-select-hr {
+  border-color: #f6d5df;
+}
+
+.team-select-hr .team-select-icon {
+  background: #fff1f2;
+  color: #e11d48;
+}
+
+.team-select-hr:hover,
+.team-select-hr.selected {
+  border-color: #eea9bd;
+  background: #fffafb;
+}
+
+.team-select-hr .team-selected-check {
+  color: #e11d48;
+}
+
+/* =========================================================
+   ACCOUNTS
+   ========================================================= */
+
+.team-select-accounts {
+  border-color: #d7eee7;
+}
+
+.team-select-accounts .team-select-icon {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.team-select-accounts:hover,
+.team-select-accounts.selected {
+  border-color: #86d6be;
+  background: #f7fffc;
+}
+
+.team-select-accounts .team-selected-check {
+  color: #059669;
+}
+
+/* =========================================================
+   ADMINISTRATION
+   ========================================================= */
+
+.team-select-administration {
+  border-color: #dbe2ea;
+}
+
+.team-select-administration .team-select-icon {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.team-select-administration:hover,
+.team-select-administration.selected {
+  border-color: #aebccc;
+  background: #f9fafb;
+}
+
+.team-select-administration .team-selected-check {
+  color: #475569;
+}
+
+/* =========================================================
+   HIDDEN SELECT
+   ========================================================= */
+
+.team-hidden-select {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  padding: 0;
+  margin: -1px;
+
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+
+  white-space: nowrap;
+
+  border: 0;
+}
+
+/* =========================================================
+   SELECTED TEAM TEXT
+   ========================================================= */
+
+.selected-team-text {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #68778c;
+
+  font-size: 11px;
+}
+
+.selected-team-text strong {
+  color: #25364f;
+}
+
+/* =========================================================
+   TEAM SELECT - LEGACY SELECT SUPPORT
+   ========================================================= */
+
+.team-select {
+  font-weight: 600;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Networking */
+
+.team-select.team-networking {
+  border-color: #b9d2f5;
+
+  background: #f5f9ff;
+
+  color: #1859a8;
+}
+
+.team-select.team-networking:focus {
+  border-color: #3f82e8;
+
+  box-shadow:
+    0 0 0 3px rgba(63, 130, 232, 0.12);
+}
+
+/* AI */
+
+.team-select.team-ai {
+  border-color: #d8c9f4;
+
+  background: #faf7ff;
+
+  color: #6840a8;
+}
+
+.team-select.team-ai:focus {
+  border-color: #8b63d9;
+
+  box-shadow:
+    0 0 0 3px rgba(139, 99, 217, 0.12);
+}
+
+/* HR */
+
+.team-select.team-hr {
+  border-color: #f0c6d7;
+
+  background: #fff7fa;
+
+  color: #a13b62;
+}
+
+.team-select.team-hr:focus {
+  border-color: #d85b86;
+
+  box-shadow:
+    0 0 0 3px rgba(216, 91, 134, 0.13);
+}
+
+/* Accounts */
+
+.team-select.team-accounts {
+  border-color: #b9e6d7;
+
+  background: #f3fcf8;
+
+  color: #047857;
+}
+
+.team-select.team-accounts:focus {
+  border-color: #34b78d;
+
+  box-shadow:
+    0 0 0 3px rgba(52, 183, 141, 0.13);
+}
+
+/* Administration */
+
+.team-select.team-administration {
+  border-color: #cbd5e1;
+
+  background: #f8fafc;
+
+  color: #475569;
+}
+
+.team-select.team-administration:focus {
+  border-color: #64748b;
+
+  box-shadow:
+    0 0 0 3px rgba(100, 116, 139, 0.13);
+}
+
+/* =========================================================
+   TEAM NOTES
+   ========================================================= */
+
+.hr-team-note,
+.accounts-team-note,
+.administration-team-note {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 6px;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.hr-team-note {
+  color: #a13b62;
+}
+
+.accounts-team-note {
+  color: #047857;
+}
+
+.administration-team-note {
+  color: #475569;
+}
+
+/* =========================================================
+   DATE INPUT
+   ========================================================= */
+
+.form-field input[type="date"] {
+  color: #52627a;
+}
+
+.form-field input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+
+  opacity: 0.7;
+}
+
+/* =========================================================
+   STATUS SELECT
+   ========================================================= */
+
+.form-field select[name="status"] {
+  font-weight: 600;
+}
+
+.form-field select[name="status"]:has(
+  option:checked[value="Active"]
+) {
+  color: #176b42;
+}
+
+.form-field select[name="status"]:has(
+  option:checked[value="Exited"]
+) {
+  color: #b42318;
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.form-actions {
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 5px 2px 0;
+}
+
+.cancel-btn,
+.save-employee-btn {
+  min-height: 42px;
+
+  padding: 0 20px;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cancel-btn {
+  border: 1px solid #d5dde7;
+
+  background: #ffffff;
+
+  color: #52627a;
+}
+
+.cancel-btn:hover {
+  background: #f4f7fa;
+
+  transform: translateY(-1px);
+}
+
+.save-employee-btn {
+  border: 1px solid #1769e0;
+
+  background: #1769e0;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 3px 8px rgba(23, 105, 224, 0.18);
+}
+
+.save-employee-btn:hover {
+  background: #125bc4;
+
+  border-color: #125bc4;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 12px rgba(23, 105, 224, 0.22);
+}
+
+.cancel-btn:disabled,
+.save-employee-btn:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* =========================================================
+   TEAM-SPECIFIC SAVE BUTTONS
+   ========================================================= */
+
+/* HR */
+
+.employee-form.hr-form-active .save-employee-btn {
+  background: #c84f78;
+
+  border-color: #c84f78;
+
+  box-shadow:
+    0 3px 10px rgba(200, 79, 120, 0.20);
+}
+
+.employee-form.hr-form-active .save-employee-btn:hover {
+  background: #ad3f65;
+
+  border-color: #ad3f65;
+}
+
+/* Accounts */
+
+.employee-form.accounts-form-active .save-employee-btn {
+  background: #059669;
+
+  border-color: #059669;
+
+  box-shadow:
+    0 3px 10px rgba(5, 150, 105, 0.20);
+}
+
+.employee-form.accounts-form-active .save-employee-btn:hover {
+  background: #047857;
+
+  border-color: #047857;
+}
+
+/* Administration */
+
+.employee-form.administration-form-active .save-employee-btn {
+  background: #475569;
+
+  border-color: #475569;
+
+  box-shadow:
+    0 3px 10px rgba(71, 85, 105, 0.20);
+}
+
+.employee-form.administration-form-active .save-employee-btn:hover {
+  background: #334155;
+
+  border-color: #334155;
+}
+
+/* AI */
+
+.employee-form.ai-form-active .save-employee-btn {
+  background: #7c3aed;
+
+  border-color: #7c3aed;
+
+  box-shadow:
+    0 3px 10px rgba(124, 58, 237, 0.20);
+}
+
+.employee-form.ai-form-active .save-employee-btn:hover {
+  background: #6d28d9;
+
+  border-color: #6d28d9;
+}
+
+/* Networking */
+
+.employee-form.networking-form-active .save-employee-btn {
+  background: #2563eb;
+
+  border-color: #2563eb;
+
+  box-shadow:
+    0 3px 10px rgba(37, 99, 235, 0.20);
+}
+
+.employee-form.networking-form-active .save-employee-btn:hover {
+  background: #1d4ed8;
+
+  border-color: #1d4ed8;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1300px) {
+  .team-selection-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1200px) {
+  .form-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .team-selection-field {
+    grid-column: 1 / -1;
+  }
+
+  .team-selection-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .add-employee-page {
+    padding: 28px 30px 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .team-selection-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .add-page-header {
+    flex-direction: column;
+  }
+
+  .back-employees-btn {
+    align-self: flex-start;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-field.full-width {
+    grid-column: auto;
+  }
+
+  .team-selection-field {
+    grid-column: auto;
+  }
+
+  .team-selection-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .form-section {
+    padding: 21px 18px 23px;
+  }
+}
+
+@media (max-width: 600px) {
+  .add-employee-page {
+    padding: 22px 15px 40px;
+  }
+
+  .add-page-header h1 {
+    font-size: 28px;
+  }
+
+  .add-header-left {
+    gap: 10px;
+  }
+
+  .add-page-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .team-selection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-select-card {
+    min-height: 92px;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px;
+  }
+
+  .team-select-icon {
+    margin-bottom: 0;
+  }
+
+  .team-select-content {
+    padding-right: 22px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+
+    align-items: stretch;
+  }
+
+  .cancel-btn,
+  .save-employee-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .form-section {
+    padding: 18px 14px 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 18px;
+  }
+
+  .team-select-card {
+    min-height: 88px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.team-select-card:focus-visible,
+.back-employees-btn:focus-visible,
+.cancel-btn:focus-visible,
+.save-employee-btn:focus-visible {
+  outline: 3px solid rgba(59, 130, 246, 0.25);
+
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   GLOBAL BOX SIZING
+   ========================================================= */
+
+.add-employee-page *,
+.add-employee-page *::before,
+.add-employee-page *::after {
+  box-sizing: border-box;
+}

@@ -1,11 +1,17 @@
 .env
+
+# Python
 __pycache__/
 *.pyc
 venv/
 .venv/
+
+# Node
 node_modules/
 dist/
 build/
+
+# Local databases
 *.db
 
 # HR data / uploaded files
