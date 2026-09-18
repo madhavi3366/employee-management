@@ -21,7 +21,7 @@ import "./Teams.css";
 // API
 // ============================================================
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://hr-dashboard-backend-lyb1.onrender.com";
 
 // ============================================================
 // DEFAULT TEAMS

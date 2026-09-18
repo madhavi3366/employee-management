@@ -16,7 +16,7 @@ import {
 import Sidebar from "../components/Sidebar";
 import "./AddEmployee.css";
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://hr-dashboard-backend-lyb1.onrender.com";
 
 // ============================================================
 // INITIAL FORM
